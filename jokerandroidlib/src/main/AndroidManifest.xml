@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.udacity.gradle.androidlib.jokerandroidlib">
+
+    <application
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".JokeTellerActivity"
+            android:label="@string/activity_name"/>
+    </application>
+
+</manifest>
