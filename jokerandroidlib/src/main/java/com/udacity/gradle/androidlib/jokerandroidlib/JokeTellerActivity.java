@@ -1,21 +1,24 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.androidlib.jokerandroidlib;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class JokeTellerActivity extends AppCompatActivity {
+	public static final String JOKE_KEY = "JOKE";
+
 	@Override
 	protected void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_joke_teller);
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(final Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_main, menu);
+		getMenuInflater().inflate(R.menu.menu_joke_teller, menu);
 		return true;
 	}
 
