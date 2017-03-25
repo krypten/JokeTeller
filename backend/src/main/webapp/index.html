@@ -90,7 +90,7 @@
     function enableClick() {
       document.getElementById('helloButton').onclick = function() {
         var name = document.getElementById('nameInput').value;
-        gapi.client.myApi.sayHi({'name': name}).execute(
+        gapi.client.api.getJoke().execute(
           function(response) {
             var outputAlertDiv = document.getElementById('outputAlert');
             outputAlertDiv.style.visibility = 'visible';
@@ -110,14 +110,14 @@
     }
     // This is called initially
     function init() {
-      var apiName = 'myApi';
+      var apiName = 'api';
       var apiVersion = 'v1';
-      var apiRoot = 'https://' + window.location.host + '/_ah/api';
+      var apiRoot = 'https://' + window.location.host + '/api/v1';
       if (window.location.hostname == 'localhost'
           || window.location.hostname == '127.0.0.1'
           || ((window.location.port != "") && (window.location.port > 1023))) {
             // We're probably running against the DevAppServer
-            apiRoot = 'http://' + window.location.host + '/_ah/api';
+            apiRoot = 'http://' + window.location.host + '/api/v1';
       }
       var callback = function() {
         enableClick();
